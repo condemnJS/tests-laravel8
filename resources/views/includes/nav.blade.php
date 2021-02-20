@@ -11,7 +11,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 @if(Auth::check())
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item"><a href="{{ route('createPost') }}" class="nav-link">Создать пост</a></li>
+                        <li class="nav-item"><a href="{{ route('posts.index') }}" class="nav-link">Создать пост</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">Профиль</a></li>
                         <a class="btn btn-danger" href="{{ route('logout') }}">Выйти</a>
                     </ul>

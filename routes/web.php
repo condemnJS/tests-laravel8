@@ -23,4 +23,9 @@ Route::match(['get', 'post'], '/login', [UserController::class, 'login'])->name(
 Route::middleware('auth')->group(function () {
     Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 
+    Route::prefix('posts')->group(function () {
+        Route::get('/', [PostController::class, 'index'])->name('posts.index');
+        Route::post('/create', [PostController::class, 'store'])->name('posts.store');
+        Route::get('/delete/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
+    });
 });
