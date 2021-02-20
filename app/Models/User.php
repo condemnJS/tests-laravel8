@@ -50,4 +50,8 @@ class User extends Authenticatable
         $this->remember_token = null;
         $this->save();
     }
+
+    public function posts() {
+        return $this->hasMany('App\Models\Post');
+    }
 }

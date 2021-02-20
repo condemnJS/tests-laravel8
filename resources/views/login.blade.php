@@ -33,7 +33,7 @@
                     <input type="checkbox" class="form-check-input" id="exampleCheck1" name="remember_token">
                     <label class="form-check-label" for="exampleCheck1">Запомнить меня</label>
                 </div>
-                <button type="submit" class="btn btn-primary mt-2">Отправить</button>
+                <button type="submit" class="btn btn-primary mt-2">Авторизироваться</button>
             </form>
         </div>
     </section>

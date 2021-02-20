@@ -36,7 +36,7 @@
                     <small class="invalid-feedback">{{ $message }}</small>
                     @enderror
                 </div>
-                <button type="submit" class="btn btn-primary mt-2">Отправить</button>
+                <button type="submit" class="btn btn-primary mt-2">Зарегистрироваться</button>
             </form>
         </div>
     </section>
