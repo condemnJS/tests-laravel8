@@ -4,6 +4,8 @@
 
 @section('content')
     <section>
+{{--        {{ dd(Auth::user()->posts[3]) }}--}}
+{{--        {{ dd(mt_rand(1, count(Auth::user()->posts))) }}--}}
         <div class="container">
             @if(Session::has('message'))
                 <div class="alert alert-success" role="alert">
@@ -20,7 +22,7 @@
                                 <strong class="text-muted"><i style="color: black">Author: </i>{{ $post->user->name }}
                                 </strong>
                                 @if(Auth::id() === $post->user->id)
-                                    <a href="{{ route('posts.destroy', ['id' => $post->id]) }}" class="btn btn-danger" style="margin-left: 10px">Delete</a>
+                                    <a href="{{ route('posts.destroy', ['id' => $post->id]) }}" class="btn btn-danger delete" style="margin-left: 10px">Delete</a>
                                 @endif
                             </div>
                         </div>

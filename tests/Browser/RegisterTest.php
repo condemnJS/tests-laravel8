@@ -20,6 +20,7 @@ class RegisterTest extends DuskTestCase
         $this->browse(function (Browser $browser) use ($user){
             $browser->visit('/register')
                 ->assertSee('Регистрация')
+                ->assertTitle('Регистрация')
                 ->type('name', $user->name)
                 ->type('email', $user->email)
                 ->type('password', $user->password)

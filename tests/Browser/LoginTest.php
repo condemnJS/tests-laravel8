@@ -16,13 +16,13 @@ class LoginTest extends DuskTestCase
      */
     public function test_login()
     {
-//        $user = User::factory()->create();
         $this->browse(function (Browser $browser) {
             $browser->visit('/login')
                 ->assertSee('Логин')
+                ->assertTitle('Логин')
                 ->type('email', 'gizat.sultan@mail.ru')
                 ->type('password', '123123')
-                ->type('remember_token', null)
+                ->check('remember_token')
                 ->press('Авторизироваться')
                 ->assertPathIs('/');
         });
